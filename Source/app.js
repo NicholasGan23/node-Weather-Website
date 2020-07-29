@@ -7,6 +7,7 @@ const forecast = require("./Utils/forecast")
 
 
 const app = express() //does not take in any parameters
+const port = process.env.PORT || 3000
 
 //Define paths for express config
 //customise folder name for views, instad of ../views can be ../template
@@ -113,8 +114,8 @@ app.get('*', (req, res) => {
 
 //to start the server, port number, callback function
 //asynchronous function
-app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 }) // the argument provided inside the port number
 //http: port 80
 
